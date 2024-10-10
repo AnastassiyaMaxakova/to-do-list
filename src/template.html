@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9425e0b1dd.js" crossorigin="anonymous"></script>
     <title>To Do List</title>
 </head>
 <body>
-    
+    <div class="nav-menu">
+
+        <div class="user-data">
+            <i class="fa-solid fa-user"></i>
+            <p class="user-name">John Smith</p>
+        </div>
+                 
+        <button type="button" id="addTaskBtn" class="nav-add-button"><i class="fa-solid fa-circle-plus"></i>Add task</button>
+        
+        <div class="nav-items">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-inbox"></i> 
+                    <a href="#" id="inboxBtn">Inbox</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-calendar-day"></i>
+                    <a href="#" id="todayBtn">Today</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <a href="#" id="upcomingBtn">Upcoming</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav-project">
+            <p id="nav-project-title">My Projects</p>
+            <button type="button" id="addProjectBtn" class="nav-add-button"><i class="fa-solid fa-circle-plus"></i>Add project</button>
+            <div class="nav-project-display">
+                <div class="project-box">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <a href="#" id="projectName">Check-up</a>
+                </div>
+                <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+            </div>
+            <div class="nav-project-display">
+                <div class="project-box">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <a href="#" id="projectName">Draw a painting</a>
+                </div>
+                <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+            </div>
+            <div class="nav-project-display">
+                <div class="project-box">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <a href="#" id="projectName">Write 15 pages</a>
+                </div>
+                <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+            </div>
+            <div class="nav-project-display">
+                <div class="project-box">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <a href="#" id="projectName">Read 10 books this month</a>
+                </div>
+                <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="content"></div>
 </body>
 </html>

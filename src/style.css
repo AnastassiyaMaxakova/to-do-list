@@ -1,0 +1,177 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif ;
+}
+
+.raleway-basic {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #535353;
+    cursor: pointer;
+}
+
+/*Navigation menu*/
+.nav-menu {
+    width: 280px;
+    height: 100vh;
+    background-color:#c1c1c147;
+    display: flex; 
+    flex-direction: column;
+    color: #535353;
+    font-size: 17px;
+}
+
+/*User data container*/
+.user-data {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    padding: 20px 15px;
+}
+
+.user-data i{
+    font-size: 20px;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/*Add project/task button container*/
+.nav-add-button{
+    display: flex;
+    align-items: center;
+    color: #a81f00;
+    line-height: 2;
+    margin: 0 12px;
+    gap: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.nav-add-button:hover{
+    background-color: #a81f006c;
+    border-radius: 5px;
+    color: #fff;    
+}
+
+.nav-add-button i {
+    font-size: 20px;
+}
+
+/*Menu items*/
+.nav-items{
+    line-height: 2;
+    color: #535353;
+    padding: 4px 12px;
+}
+.nav-items li {
+    padding: 0 10px;
+}
+
+.nav-items i {
+    margin-right:10px;
+}
+
+.nav-items li:hover{
+    background-color: #c1c1c15d;
+    border-radius: 5px;
+}
+
+/*Project container*/
+.nav-project{
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 5px;
+}
+
+#addProjectBtn{
+    margin: 0;
+}
+
+#nav-project-title{
+    font-weight: 600;
+    line-height: 2;
+    padding: 0 5px;
+    font-size: 18px;
+}
+
+#nav-project-title:hover{
+    background-color: #c1c1c15d;
+    border-radius: 5px;
+}
+
+/*Projects display*/
+.nav-project-display{
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding:  5px;
+    gap: 10px;
+    position: relative;
+}
+
+.nav-project-name{
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+.nav-project-display:hover{
+    background-color: #c1c1c15d;
+    border-radius: 5px;
+}
+
+.nav-project-display i{
+    font-size: 15px;
+}
+
+.project-box{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+
+#projectName{
+    font-size: 15px;
+}
+
+.fa-solid.fa-hashtag{
+    font-weight: 200;
+    margin-right: 5px;
+}
+
+#editProjectBtn {
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+#editProjectBtn:hover{
+    opacity: 1;
+}
