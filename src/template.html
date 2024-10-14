@@ -18,7 +18,7 @@
             <p class="user-name">John Smith</p>
         </div>
                  
-        <button type="button" id="addTaskBtn" class="nav-add-button"><i class="fa-solid fa-circle-plus"></i>Add task</button>
+        <button type="button" id="addTaskBtn" class="add-button nav-button"><i class="fa-solid fa-circle-plus"></i>Add task</button>
         
         <div class="nav-items">
             <ul>
@@ -26,7 +26,7 @@
                     <i class="fa-solid fa-inbox"></i> 
                     <a href="#" id="inboxBtn">Inbox</a>
                 </li>
-                <li>
+                <li class="active">
                     <i class="fa-solid fa-calendar-day"></i>
                     <a href="#" id="todayBtn">Today</a>
                 </li>
@@ -39,42 +39,68 @@
 
         <div class="nav-project">
             <p id="nav-project-title">My Projects</p>
-            <button type="button" id="addProjectBtn" class="nav-add-button"><i class="fa-solid fa-circle-plus"></i>Add project</button>
-            <div class="nav-project-display">
-                <div class="project-box">
-                    <i class="fa-solid fa-hashtag"></i>
-                    <a href="#" id="projectName">Check-up</a>
+            <button type="button" id="addProjectBtn" class="add-button nav-button"><i class="fa-solid fa-circle-plus"></i>Add project</button>
+            
+            <div class="nav-projects-container">
+                <div class="nav-project-display">
+                    <div class="project-box">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <a href="#" id="projectName">Check-up</a>
+                    </div>
+                    <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
                 </div>
-                <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+                <div class="nav-project-display">
+                    <div class="project-box">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <a href="#" id="projectName">Draw a painting, buy paints, buy canvas</a>
+                    </div>
+                    <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+                </div>
+                <div class="nav-project-display">
+                    <div class="project-box">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <a href="#" id="projectName">Write 15 pages</a>
+                    </div>
+                    <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+                </div>
+                <div class="nav-project-display">
+                    <div class="project-box">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <a href="#" id="projectName">Read 10 books this month</a>
+                    </div>
+                    <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+                </div>
+
+               
             </div>
-            <div class="nav-project-display">
-                <div class="project-box">
-                    <i class="fa-solid fa-hashtag"></i>
-                    <a href="#" id="projectName">Draw a painting</a>
-                </div>
-                <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
-            </div>
-            <div class="nav-project-display">
-                <div class="project-box">
-                    <i class="fa-solid fa-hashtag"></i>
-                    <a href="#" id="projectName">Write 15 pages</a>
-                </div>
-                <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
-            </div>
-            <div class="nav-project-display">
-                <div class="project-box">
-                    <i class="fa-solid fa-hashtag"></i>
-                    <a href="#" id="projectName">Read 10 books this month</a>
-                </div>
-                <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+        </div>
+
+    </div>
+    
+    <main>
+        <div class="content">
+            <div class="content-title" id="titleId">Today</div>
+
+            <div class="task-display">
+                <label class="task-radio-box" for="task"> 
+                    <input id="task" type="checkbox">
+                    <p class="task-name" id="taskName">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, velit quas iusto non blanditiis ullam, id facilis fugit assumenda.</p> 
+                    <a href="#" id="editTaskBtn"><i class="fa-solid fa-ellipsis"></i></a>
+                </label>
+                <p class="task-description" id="taskDescription"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur vel provident ipsa temporibus vero, facere necessitatibus animi aperiam odio est eos laudantium! Nisi ullam quidem tempore voluptatum. Repellendus, debitis.
+                </p>
             </div>
 
-        </div>
+            <div class="content-button-container">
+                <button type="button" id="addTaskBtn" class="add-button display-button"><i class="fa-solid fa-plus"></i>Add task</button>
+            </div>
+    </main>
+
 
     </div>
 
 
 
-    <div class="content"></div>
+
 </body>
 </html>
