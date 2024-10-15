@@ -31,6 +31,10 @@ p {
     color: #535353;
 }
 
+input, .textarea {
+    outline: none;
+}
+
 /*Navigation menu*/
 .nav-menu {
     width: 280px;
@@ -215,8 +219,8 @@ main{
     font-size: 34px;
     font-weight: 500;
     margin-bottom: 30px;
- 
 }
+
 
 .task-display {
     flex-direction: column;
@@ -241,6 +245,7 @@ main{
 }
 
 
+/*Checkbox button*/
 
 input[type="checkbox"] {
     -webkit-appearance: none;
@@ -266,7 +271,7 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked {
     border: 2px solid #a81f00;
-    background-color: #a81f0073;
+    background-color:  #a81f0073;
 }
 
 
@@ -307,4 +312,106 @@ input[type="checkbox"]:checked {
 .content-button-container>*:hover{
     color: #a81f00;
     font-weight: 600;
+}
+
+/*Task modal*/
+
+.modal {
+    padding: 20px;
+    width: 550px;
+    max-height:350px;
+    border: 0;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    border-radius: 5px;
+    position: absolute;
+    top: 10%;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+    overflow: hidden;
+}
+  
+.modal::backdrop {
+    background: rgba(0, 0, 0, 0.17);
+}
+
+.close-button {
+    border: none;
+    background: none;
+    top: 7px;
+    right:10px;
+    position: absolute;
+    font-size: 15px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.textarea {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    resize: both;
+    min-height: 40px;
+    max-height: 200px;
+    line-height: 20px;
+    font-size: 15px;
+    color: #535353;
+    border: none;
+    resize: none;
+    margin-bottom: 15px;
+}
+  
+.textarea[contenteditable]:empty::before {
+    content: "Placeholder still possible";
+}
+
+.textarea::-webkit-scrollbar {
+    width: 10px;
+}
+  
+.textarea::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+.textarea::-webkit-scrollbar-thumb {
+    background: #a81f002e; 
+  }
+  
+  /* Handle on hover */
+.textarea::-webkit-scrollbar-thumb:hover {
+    background: #a81f006c; 
+}
+
+input[type="date"] {
+    font-weight: 500;
+    width: 110px;
+    border: none;
+    font-size: 14px;
+   
+}
+
+.save-button{
+    background-color: #a81f00d6;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 5px 7px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
 }

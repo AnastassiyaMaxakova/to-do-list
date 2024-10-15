@@ -24,7 +24,7 @@
             <ul>
                 <li>
                     <i class="fa-solid fa-inbox"></i> 
-                    <a href="#" id="inboxBtn">Inbox</a>
+                    <a href="#" id="inboxBtn">All tasks</a>
                 </li>
                 <li class="active">
                     <i class="fa-solid fa-calendar-day"></i>
@@ -94,10 +94,23 @@
             <div class="content-button-container">
                 <button type="button" id="addTaskBtn" class="add-button display-button"><i class="fa-solid fa-plus"></i>Add task</button>
             </div>
+    
+        <!--Add task modal-->
+        <dialog class="modal" id="modal">
+            <button class="close-button" id="closeBtn"><i class="fa-solid fa-x"></i></button>
+            <form autocomplete="off" id="formTask">
+                <div class="form-content">
+                    <input type="text" name="task-name" id="taskName" placeholder="Task name" required>
+                    <span class="textarea" role="textbox" contenteditable></span>
+                    <input type="date" name="task-date" id="taskDate" required>
+                    <button class="save-button" id="saveBtn">Add task</button>
+                </div>
+            </form>
+        </dialog>
     </main>
 
-
-    </div>
+    
+   
 
 
 
