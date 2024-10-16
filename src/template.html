@@ -24,7 +24,7 @@
             <ul>
                 <li>
                     <i class="fa-solid fa-inbox"></i> 
-                    <a href="#" id="inboxBtn">All tasks</a>
+                    <a href="#" id="inboxBtn">Completed tasks</a>
                 </li>
                 <li class="active">
                     <i class="fa-solid fa-calendar-day"></i>
@@ -38,32 +38,42 @@
         </div>
 
         <div class="nav-project">
-            <p id="nav-project-title">My Projects</p>
+            <a href="#" id="nav-project-title">My Projects</a>
             <button type="button" id="addProjectBtn" class="add-button nav-button"><i class="fa-solid fa-circle-plus"></i>Add project</button>
             
             <div class="nav-projects-container">
-                <div class="nav-project-display">
+                <div class="project-add hidden" id="nav-project-add">
+                    <div class="project-box">
+                        <i class="fa-solid fa-pen"></i>
+                        <input type="text" name="project-name" id="projectName" placeholder="Enter project name" autocomplete="off" required>
+                    </div>
+                    <div class="project-actions">
+                        <button type="button" id="saveProjectBtn" class="project-button">Add</button>
+                        <button type="button" id="closeProjectBtn" class="project-button">Cancel</button>
+                    </div>
+                </div>
+                <div class="project-display">
                     <div class="project-box">
                         <i class="fa-solid fa-hashtag"></i>
                         <a href="#" id="projectName">Check-up</a>
                     </div>
                     <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
                 </div>
-                <div class="nav-project-display">
+                <div class="project-display">
                     <div class="project-box">
                         <i class="fa-solid fa-hashtag"></i>
                         <a href="#" id="projectName">Draw a painting, buy paints, buy canvas</a>
                     </div>
                     <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
                 </div>
-                <div class="nav-project-display">
+                <div class="project-display">
                     <div class="project-box">
                         <i class="fa-solid fa-hashtag"></i>
                         <a href="#" id="projectName">Write 15 pages</a>
                     </div>
                     <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
                 </div>
-                <div class="nav-project-display">
+                <div class="project-display">
                     <div class="project-box">
                         <i class="fa-solid fa-hashtag"></i>
                         <a href="#" id="projectName">Read 10 books this month</a>
@@ -79,22 +89,87 @@
     
     <main>
         <div class="content">
-            <div class="content-title" id="titleId">Today</div>
+            <div class="today-display-main">
+                <div class="content-title" id="titleId">Today</div>
+                <div class="task-display">
+                    <label class="task-radio-box" for="task"> 
+                        <input id="task" type="checkbox">
+                        <p class="task-name" id="taskName">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, velit quas iusto non blanditiis ullam, id facilis fugit assumenda.</p> 
+                        <a href="#" id="editTaskBtn"><i class="fa-solid fa-ellipsis"></i></a>
+                    </label>
+                    <p class="task-description" id="taskDescription"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur vel provident ipsa temporibus vero, facere necessitatibus animi aperiam odio est eos laudantium! Nisi ullam quidem tempore voluptatum. Repellendus, debitis.
+                    </p>
+                </div>
 
-            <div class="task-display">
-                <label class="task-radio-box" for="task"> 
-                    <input id="task" type="checkbox">
+                <div class="content-button-container">
+                    <button type="button" id="addTaskBtn" class="add-button display-button"><i class="fa-solid fa-plus"></i>Add task</button>
+                </div>
+            </div>
+
+            <div class="project-display-main hidden">
+                <div class="content-title" id="titleId">Projects</div>
+                <div class="project-display">
+                    <div class="project-box">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <a href="#" id="projectName">Check-up</a>
+                    </div>
+                    <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+                </div>
+                <div class="project-display">
+                    <div class="project-box">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <a href="#" id="projectName">Draw a painting, buy paints, buy canvas</a>
+                    </div>
+                    <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+                </div>
+                <div class="project-display">
+                    <div class="project-box">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <a href="#" id="projectName">Write 15 pages</a>
+                    </div>
+                    <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+                </div>
+                <div class="project-display">
+                    <div class="project-box">
+                        <i class="fa-solid fa-hashtag"></i>
+                        <a href="#" id="projectName">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia est velit, vitae ad obcaecati perspiciatis, totam harum architecto atque praesentium at quis eum deserunt libero nisi doloremque pariatur aperiam aut.</a>
+                    </div>
+                    <a href="#" id="editProjectBtn"><i class="fa-solid fa-ellipsis"></i></a>
+                </div>
+            </div>
+
+            <div class="upcoming-display-main hidden">
+                <div class="content-title" id="titleId">Upcoming</div>
+                <div class="task-display">
+                    <label class="task-radio-box" for="task"> 
+                        <input id="task" type="checkbox">
+                        <p class="task-name" id="taskName">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, velit quas iusto non blanditiis ullam, id facilis fugit assumenda.</p> 
+                        <a href="#" id="editTaskBtn"><i class="fa-solid fa-ellipsis"></i></a>
+                    </label>
+                    <p class="task-description" id="taskDescription"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur vel provident ipsa temporibus vero, facere necessitatibus animi aperiam odio est eos laudantium! Nisi ullam quidem tempore voluptatum. Repellendus, debitis.
+                    </p>
+                </div>
+
+
+
+            </div>
+
+            <div class="completed-display-main hidden">
+                <div class="content-title" id="titleId">Completed tasks</div>
+                <div class="task-display">
+                    <div class="completed-task">
+                        <i class="fa-regular fa-square-check"></i>
                     <p class="task-name" id="taskName">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, velit quas iusto non blanditiis ullam, id facilis fugit assumenda.</p> 
-                    <a href="#" id="editTaskBtn"><i class="fa-solid fa-ellipsis"></i></a>
-                </label>
-                <p class="task-description" id="taskDescription"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur vel provident ipsa temporibus vero, facere necessitatibus animi aperiam odio est eos laudantium! Nisi ullam quidem tempore voluptatum. Repellendus, debitis.
-                </p>
+                    </div>
+                    <p class="task-description completed" id="taskDescription"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur vel provident ipsa temporibus vero, facere necessitatibus animi aperiam odio est eos laudantium! Nisi ullam quidem tempore voluptatum. Repellendus, debitis.
+                    </p>
+                </div>
             </div>
+        </div>
 
-            <div class="content-button-container">
-                <button type="button" id="addTaskBtn" class="add-button display-button"><i class="fa-solid fa-plus"></i>Add task</button>
-            </div>
-    
+
+
+
         <!--Add task modal-->
         <dialog class="modal" id="modal">
             <button class="close-button" id="closeBtn"><i class="fa-solid fa-x"></i></button>

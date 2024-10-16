@@ -26,6 +26,9 @@ a {
     color: #535353;
     cursor: pointer;
 }
+button {
+    cursor: pointer;
+}
 
 p {
     color: #535353;
@@ -34,6 +37,25 @@ p {
 input, .textarea {
     outline: none;
 }
+
+
+.fa-solid.fa-hashtag{
+    font-weight: 200;
+    margin-right: 5px;
+    color: #535353;
+}
+
+.active {
+    background-color: #a81f002e;
+    border-radius: 5px;
+    color: #a81f00;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
 
 /*Navigation menu*/
 .nav-menu {
@@ -140,7 +162,7 @@ input, .textarea {
     
 }
 /*Projects display*/
-.nav-project-display{
+.project-display{
     display: flex;
     align-items: center;
     height: 35px;
@@ -149,17 +171,17 @@ input, .textarea {
     justify-content: space-between;
 }
 
-.nav-project-name{
+.project-name{
     padding: 5px 0;
     font-size: 15px;
 }
 
-.nav-project-display:hover{
+.project-display:hover{
     background-color: #c1c1c15d;
     border-radius: 5px;
 }
 
-.nav-project-display i{
+.project-display i{
     font-size: 15px;
 }
 
@@ -174,10 +196,7 @@ input, .textarea {
     font-size: 15px;
 }
 
-.fa-solid.fa-hashtag{
-    font-weight: 200;
-    margin-right: 5px;
-}
+
 
 #editProjectBtn {
     opacity: 0.2;
@@ -187,17 +206,6 @@ input, .textarea {
     opacity: 1;
 }
 
-
-.active {
-    background-color: #a81f002e;
-    border-radius: 5px;
-    color: #a81f00;
-    pointer-events: none;
-}
-
-.hidden {
-    display: none;
-}
 
 /*Content*/
 main{
@@ -385,12 +393,10 @@ input[type="text"] {
     background: #f1f1f1; 
   }
    
-  /* Handle */
 .textarea::-webkit-scrollbar-thumb {
     background: #a81f002e; 
   }
   
-  /* Handle on hover */
 .textarea::-webkit-scrollbar-thumb:hover {
     background: #a81f006c; 
 }
@@ -415,3 +421,74 @@ input[type="date"] {
     bottom: 15px;
     right: 20px;
 }
+
+/*Add project prompt*/
+.project-add{
+    padding: 5px;
+}
+
+.project-add input {
+    background: none;
+    font-weight: 450;
+    width: 200px;
+}
+
+.fa-solid.fa-pen{
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    gap: 10px;
+}
+
+.project-actions >* {
+    border: none;
+    width: 60px;
+    padding: 3px;
+    font-weight:500 ;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#saveProjectBtn{
+    background-color: #a81f00;
+}
+
+#saveProjectBtn:hover{
+    background-color: #a81f0080;
+}
+
+#closeProjectBtn {
+    background-color: #00a819;
+}
+
+#closeProjectBtn:hover {
+    background-color: #00a81981;
+}
+
+.completed-task{
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.completed {
+    overflow: visible;
+    white-space: wrap;
+    margin-left: 27.5px;
+}
+
+.completed-task i{
+    color: #00a819;
+    font-size: 20px;
+    margin-top: 3px;
+}
+
