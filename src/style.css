@@ -211,6 +211,7 @@ input, .textarea {
 main{
     position: relative;
     flex-grow: 1;
+    overflow: auto;
 }
 
 .content {
@@ -234,6 +235,8 @@ main{
     flex-direction: column;
     justify-content: space-between; 
     line-height: 1.3;  
+    border-bottom: #53535328 1px solid;
+    margin-bottom: 20px;
 }
 
 .task-radio-box{
@@ -250,8 +253,26 @@ main{
     text-overflow: ellipsis; 
     font-size: 14px;
     margin-left: 30px;
+    margin-bottom: 10px;
 }
 
+.due-date-display {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left: 30px;
+}
+
+#dueDate {
+    font-size: 15px;
+    color: #535353;
+}
+
+.fa-regular.fa-calendar {
+    font-size: 15px;
+    color: #535353;
+}
 
 /*Checkbox button*/
 
@@ -382,21 +403,26 @@ input[type="text"] {
 }
   
 .textarea[contenteditable]:empty::before {
-    content: "Placeholder still possible";
+    content: "Description";
 }
 
+/*Scroll bar*/
+main::-webkit-scrollbar,
 .textarea::-webkit-scrollbar {
     width: 10px;
 }
   
+main::-webkit-scrollbar-track,
 .textarea::-webkit-scrollbar-track {
     background: #f1f1f1; 
   }
    
+main::-webkit-scrollbar-thumb,
 .textarea::-webkit-scrollbar-thumb {
     background: #a81f002e; 
   }
   
+main::-webkit-scrollbar-thumb:hover,
 .textarea::-webkit-scrollbar-thumb:hover {
     background: #a81f006c; 
 }
